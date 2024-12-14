@@ -1,0 +1,180 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  background-color: #f0f4f8;
+  color: #333;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* App Container */
+.App {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: center;
+  margin: 20px;
+}
+
+/* Header */
+h1 {
+  color: #4caf50;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Input and Buttons */
+input[type="text"] {
+  width: 80%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+button {
+  padding: 10px 15px;
+  background-color: #4caf50;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+button:disabled {
+  background-color: #ddd;
+  cursor: not-allowed;
+}
+
+/* Task List */
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f9f9f9;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+li.completed {
+  text-decoration: line-through;
+  background-color: #e1f5e1;
+}
+
+button.delete-btn,
+button.edit-btn {
+  padding: 5px 10px;
+  background-color: #ff5722;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button.delete-btn:hover,
+button.edit-btn:hover {
+  background-color: #f44336;
+}
+
+/* Edit Task Section */
+input[type="text"].edit {
+  width: 70%;
+  margin-bottom: 10px;
+}
+
+button.save-btn {
+  background-color: #2196f3;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+}
+
+button.save-btn:hover {
+  background-color: #1976d2;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .App {
+    width: 90%; /* Make the app container take 90% width */
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 20px; /* Smaller heading for mobile */
+  }
+
+  input[type="text"] {
+    width: 70%; /* Make input a little smaller */
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  button {
+    width: 100%; /* Make buttons span the entire width */
+    padding: 12px;
+    margin-top: 10px;
+  }
+
+  ul {
+    padding-left: 10px;
+  }
+
+  li {
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start;
+  }
+
+  button.delete-btn,
+  button.edit-btn {
+    width: 100%; /* Make buttons span the entire width in small screens */
+    margin-top: 10px;
+  }
+
+  button.save-btn {
+    width: 100%;
+    padding: 12px;
+  }
+}
+
+/* Further breakpoints for larger devices if needed */
+@media (max-width: 400px) {
+  h1 {
+    font-size: 18px;
+  }
+
+  input[type="text"] {
+    width: 100%; /* Full width on very small screens */
+  }
+}
